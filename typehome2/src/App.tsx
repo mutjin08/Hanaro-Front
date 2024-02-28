@@ -11,6 +11,7 @@ import Calculator from './component/calculator';
 import { AppProvider } from './component/mycontext';
 import Logon from './component/Logon';
 import AlbumList from './component/AlbumList';
+import PhotoList from './component/PhotoList';
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Layout/>} >
               <Route index element={<Logon/>} ></Route>
               <Route path="/album/list" element={<AlbumList/>} ></Route>
+              <Route path="/photo/list/:id" element={<PhotoList/>} ></Route>
               <Route path="/home" element={<Home/>} ></Route>
               <Route path="/counter1" element={<Counter1/>} ></Route>
               <Route path="/counter2" element={<Counter2/>} ></Route>

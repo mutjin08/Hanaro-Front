@@ -71,7 +71,7 @@ function AlbumList() {
     const navigate = useNavigate();
     const buttonClick = ()=>{
         
-        navigate("/temp", {state:selectItem}); //state로만 넘거야 한다 
+        navigate("/photo/list", {state:selectItem}); //state로만 넘거야 한다 
     }
 
     return ( <div className='container mt-3' style={{"marginTop":"50px"}}> 
