@@ -34,6 +34,11 @@ function AlbumList() {
     const itemClick = (item:ItemType)=>{
         setSelectItem({...item});//JSON으로 저장하자 
         console.log( item.id, "selected");
+        //자식컴포넌트의 경우에는 props로 넘기면 된다
+        //화면전환 : useNaviagate -> const navigate = useNavigate();
+        
+        //navigate("라우터에서 정의한 url", {selectItem:selectItem})
+        //받는 쪽에서는 let location = useLocation();
     }
 
 
@@ -60,3 +65,5 @@ function AlbumList() {
 }
 
 export default AlbumList;
+
+//https://jsonplaceholder.typicode.com/

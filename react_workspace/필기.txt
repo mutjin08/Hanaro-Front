@@ -1,0 +1,93 @@
+클래스 기반 컴포넌트 
+class MyComponent extends React.Component 
+
+클래스안에 html다 넣어놓고 독립되게 프로그램 
+
+return ( 
+    <h1 className="Title">제목</h1>
+)
+
+anchor 태그 사용못함 -> <a href="">페이지</a> 
+
+SPA 개념에 어긋난다. react에서 <a href="">페이지</a> 는 아예 다른 사이트로 
+이동할때 사용한다. 리액트에서 Link라는 별도의 태그를 제공하고 있다
+
+클래스 설계시에 생성자에 두개의 매개변수가 전달되어야 한다 
+
+props : 부모 컴포넌트 입장에서 자식컴포넌트한테 값이나 참조를 전달하고자 할때 
+        값의 경우는   키="값1"  
+        참조의 경우는 키={변수명}, 배열, 객체, 함수
+state : 함수나 클래스 내부에서 존재. 상태정보를 저장한다. 
+       
+클래스의 경우에는 this.state 또는 this.props를 사용해 접근했으나 
+함수의 경우에는 this.state 또는 this.props를 못가진다. 대신에 hook을 이용해서 
+사용이 가능해졌다. useState와 함수의 매개변수를 이용해 접근가능하다 
+그러면서 함수기반 컴포넌트로 흐름이 옮겨온다
+
+마운트 : 태그와 변수들, state, props같은것들이 연동되는 동작을 
+
+자바스크립트 react 
+타입스크립트 react  
+
+jsp페이지안에 디비 연결코드까지 모든 java코드가 다 들어 있음
+html + css+ javscript+ java 항상새로만든다. 
+
+MVC View와 Model로 나누어서 View 에는 html+css+javascript , 아주 최소한의 
+                                    java코드 ejs작업
+
+스프링프레임워크 => 외장 톰캣,  jsp엔진, 프로젝트 배포시 war형식을 사용한다.
+                  MVC(Model, View, Controller), json라이브러리 내장 안되어있음
+
+스프링부트 => View 를 다른곳을 독립 MVVC방식 
+             View -> react,vue, angular 
+             디비랑 직접 붙는 거 없고 Ajax통신을 통해서 백앤드하고 데이터를 받아온다
+             백앤드/프론트앤드 완전 분리 
+             백앤드에 최적화, 내장톰캣사용, 배포시 jar형식, jsp엔진 X
+             jsp엔진을 스프링 부트에서 쓰면 배포시 war를 써야 한다
+             관리자화면 => thymleaf, mustache 
+
+full stack : 개발자가 프론트앤드 백앤드 배포까지 책임진다. CI/CD(도커랑 쿠버네티스)
+             json 라이브러리 내장형, Restful API Server에 최적화  
+
+RDBMS(Relational Database Management System) 프로그램 
+oracle, mysql, mssql등이 있다
+oracle - 대용량 데이터 처리, 색인순차검색(인덱스)을 지원한다
+         튜닝이라는 작업을 통해서 속도가 더 빠르게 할 수 있다 
+         오라클하고  PL/SQL  프로그래밍 언어 오라클엔진이 해석하는 
+         언어이다.  함수(반환값이 있으면)만들고 프로시저(반환값이 없으면)만들고
+         저 두개를 합쳐서 함수라고 부른언어가 C언어임. 
+         대용량 데이터처리의 경우에는 이걸 웹페이지로 호출하면 
+         100만개 오늘 처리해야함 50~100개씩
+         1페이지 100개 읽어와서 전체 선택후 마감  100 
+         2페이지 100개 읽어와서 전체 선택후 마감  100 
+         3페이지 100개 읽어와서 전체 선택후 마감  100 
+            
+         PL/SQL로 디비안에서 프로그램을 만들어서 돌린다. 
+         디비엔진이 스스로 처리 => 말일날 마다 알아서 돌린다. 
+
+         튜닝 기초 
+
+mysql : 무료버전인 mariadb 를 많이 사용. 장점:클라우드에서 라이선스를 갖고있는 
+        경우가 많아서 클라우드에 포팅할때 편함.           
+        오라클에 비하면 진짜 느리다 => 검색이 너무 느려서 redis 라는 메모리디비를 
+        요즘에 사용해서 보조적으로 사용을 한다 
+
+NOSQL db :비정형자료 저장 , mongodb : JSON객체배열로 저장, 자바스크립트를 이용해서 
+       데이터 저장 수정 삭제 검색을 담당, 빅데이터 분석용 
+
+       insert into 테이블(id, name) values(1, '홍길동'); //sql 
+
+       db.컬렉션.insert({id:1, name:"홍길동"});
+
+
+       sqld 자격증은 필수
+
+       emp /dept ~~~ 오라클사가 classicmodels 
+       player - sqld 책 쓴 사람이 만든 데이터 
+
+       정보보안기사 -> 사람인, 잡코리아
+
+      
+
+
+
