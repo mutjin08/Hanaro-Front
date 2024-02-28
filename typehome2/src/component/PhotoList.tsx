@@ -2,20 +2,16 @@ import {useContext, useEffect, useState} from "react";
 import {useLocation, useSearchParams} from "react-router-dom";
 import { AppContext, getStateFromLocalStorage } from "./mycontext";
 import axios from "axios";
+import ImageList from "./ImageList";
+import { PhotoType } from "./type/commonType";
 
 //https://jsonplaceholder.typicode.com/photos?albumId=20
-type PhotoType =   {
-    "albumId": number,
-    "id": number,
-    "title": string,
-    "url": string,
-    "thumbnailUrl": string
-}
-
 function PhotoList() {
     let location = useLocation();
     let {id} = location.state;
     let [photoItems, setPhotoItems] = useState<PhotoType[]>([]);
+    let [userid, setUserid] = useState<string>();
+    let [username, setUsername] = useState<string>();
 
     let context = useContext(AppContext);
     useEffect(()=>{
@@ -24,11 +20,13 @@ function PhotoList() {
         context.state = getStateFromLocalStorage("appState");//로그온한 아이디가져오고 다른 정보 불러온다 
         //axios 로 가져와서 콘텍스트에 저장하기
         let {userid, username} = context.state;
+        setUserid(userid);
+        setUsername(username);
         let url = "https://jsonplaceholder.typicode.com/photos?albumId="+id;
         console.log( url );
         axios.get(url, {signal:controller.signal})
         .then( (res)=>{
-            console.log(res.data[0]);
+            console.log(res.data);
             setPhotoItems(res.data);
         })
         .catch(( error)=>{
@@ -45,13 +43,9 @@ function PhotoList() {
 
     return (
         <div>
-            <h1>사용자번호, 사용자이름</h1>
-            <h1>선택값 : {id}</h1>
-            <ul>
-                {
-                    photoItems.map((item:PhotoType)=>{return(<li key={item.id}><img src={item.thumbnailUrl}></img></li>)})
-                }
-            </ul>
+            <h1>{userid} {username}</h1>
+            <h1>앨범번호 : {id}</h1>
+            <ImageList images={photoItems}></ImageList>
         </div>
     );
 }
