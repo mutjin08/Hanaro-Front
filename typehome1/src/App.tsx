@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom';
 import Layout from './component/layout';
 import Home from './component/home';
 import Counter1 from './component/counter1';
