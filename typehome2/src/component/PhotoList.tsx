@@ -42,10 +42,16 @@ function PhotoList() {
         }
         //setItems([...itemData]);//axios로 데이터 가져와서 출력하기 
     }, []);
-    
+
     return (
         <div>
-
+            <h1>사용자번호, 사용자이름</h1>
+            <h1>선택값 : {id}</h1>
+            <ul>
+                {
+                    photoItems.map((item:PhotoType)=>{return(<li key={item.id}><img src={item.thumbnailUrl}></img></li>)})
+                }
+            </ul>
         </div>
     );
 }

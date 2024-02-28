@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Layout/>} >
               <Route index element={<Logon/>} ></Route>
               <Route path="/album/list" element={<AlbumList/>} ></Route>
-              <Route path="/photo/list/:id" element={<PhotoList/>} ></Route>
+              <Route path="/photo/list" element={<PhotoList/>} ></Route>
               <Route path="/home" element={<Home/>} ></Route>
               <Route path="/counter1" element={<Counter1/>} ></Route>
               <Route path="/counter2" element={<Counter2/>} ></Route>
