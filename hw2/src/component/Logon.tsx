@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { AppContext, saveStateToLocalStorage } from "./mycontext";
+import { AppContext } from "./mycontext";
 import axios from 'axios';
 
 function Logon() {

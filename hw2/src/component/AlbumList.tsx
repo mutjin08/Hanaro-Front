@@ -77,7 +77,7 @@ function AlbumList() {
             <h1>albumList</h1>
             <button type='button' className="button btn-primary"
                 disabled={selectItem.id == -1 ? true : false}
-                onClick={buttonClick}>사진보기</button>
+                onClick={buttonClick}>앨범 상세보기</button>
 
             <ul>
                 {
