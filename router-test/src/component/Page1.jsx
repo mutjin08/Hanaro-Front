@@ -14,7 +14,7 @@ function Page1() {
         if(!location.state){
             console.log("...start:", location.state);
         }else{
-            console.log("...again:", location.state);
+            console.log("...~again:", location.state);
         }
         console.log("mount!!! : 다른 component가 이 component로 교체될 때");
 
