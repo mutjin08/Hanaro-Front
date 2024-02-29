@@ -75,8 +75,6 @@ function AlbumList() {
     return (
         <div>
             <h1>albumList</h1>
-            <h3>유저번호 : {userid}</h3>
-            <h3>유저이름 : {username}</h3>
             <button type='button' className="button btn-primary"
                 disabled={selectItem.id == -1 ? true : false}
                 onClick={buttonClick}>사진보기</button>

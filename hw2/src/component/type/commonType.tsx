@@ -43,7 +43,6 @@ export type StateType = {
     username:string;
     isLogon:boolean; 
     callBack:(param:boolean)=>void; //일의 종료 - useReducer가 안다. 일이 종료하면 호출되길 바라고 함 
-
 }
 
 

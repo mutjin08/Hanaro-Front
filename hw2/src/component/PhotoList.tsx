@@ -46,8 +46,6 @@ function PhotoList() {
     return (
         <div>
             <h1>photoList</h1>
-            <h3>유저번호: {userid}</h3>
-            <h3>유저이름: {username}</h3>
             <h3>앨범번호: {id}</h3>
             <ImageList images={photoItems} />
             <button type='button' onClick={buttonClick}>뒤로가기</button>
