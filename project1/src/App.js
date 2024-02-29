@@ -3,6 +3,7 @@ import BasicLayout from "./component/layout/BasicLayout";
 import MainPage from "./component/main/MainPage";
 import MemberLayout from "./component/layout/MemberLayout";
 import MemberRegister from "./component/member/MemberRegister";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
