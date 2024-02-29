@@ -19,3 +19,12 @@ npm install bootstrap
 npm install axios
 npm install react-router-dom
 npm install @babel/plugin-proposal-private-property-in-object
+
+<h1>router-test</h1>
+<h3>date : 24-02-29</h3>
+npx create-react-app router-test
+cd router-test
+npm install bootstrap
+npm install axios
+npm install react-router-dom
+npm install @babel/plugin-proposal-private-property-in-object

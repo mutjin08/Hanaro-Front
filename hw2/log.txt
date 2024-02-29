@@ -3,3 +3,5 @@ Logon.tsx
 AlbumList.tsx
 PhotoList.tsx
 Home.tsx
+
+commonType.tsx(StateType, LogonAction) -> mycontext.tsx
