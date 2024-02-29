@@ -1,11 +1,9 @@
 import {Routes, Route} from 'react-router-dom'
 import { AppProvider } from './component/mycontext';
-
-import Layout from './component/layout';
+import Layout from './component/Layout';
 import Logon from './component/Logon';
-import AlbumList from './component/albumList';
-import PhotoList from './component/photoList';
-import Home from './component/home';
+import AlbumList from './component/AlbumList';
+import PhotoList from './component/PhotoList';
 
 function App() {
   return (
@@ -17,7 +15,6 @@ function App() {
               <Route index element={<Logon/>} ></Route>
               <Route path="/album/list" element={<AlbumList/>} ></Route>
               <Route path="/photo/list" element={<PhotoList/>} ></Route>
-              <Route path="/home" element={<Home/>} ></Route>
           </Route>
         </Routes>
       </AppProvider>
