@@ -29,10 +29,10 @@ npm install axios
 npm install react-router-dom
 npm install @babel/plugin-proposal-private-property-in-object
 
-<h1>hw2</h1>
-<h3>date : 24-02-29</h3>
-npx create-react-app hw2 --template typescript
-cd hw2
+<h1>parksujin</h1>
+<h3>date : 24-03-02</h3>
+npx create-react-app parksujin --template typescript
+cd parksujin
 npm install bootstrap
 npm install axios
 npm install react-router-dom

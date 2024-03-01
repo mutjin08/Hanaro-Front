@@ -8,7 +8,6 @@ import PhotoList from './component/PhotoList';
 function App() {
   return (
     <div>
-      <h1>App</h1>
       <AppProvider>
         <Routes>
           <Route path="/" element={<Layout/>} >

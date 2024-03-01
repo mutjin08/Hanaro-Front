@@ -1,9 +1,10 @@
 //리듀서 
 //컨텍스트 프로바이더 
 
-import { useReducer } from "react";
+import { useReducer, useEffect, useState } from "react";
 import { StateType, LogonAction } from "./type/commonType";
 import { createContext, Dispatch } from "react";
+import axios from "axios";
 
 //기본값 전달 - 시작할때 값 
 const initalState:StateType={userid:"", username:"", isLogon:false, callBack:(param:boolean)=>null }

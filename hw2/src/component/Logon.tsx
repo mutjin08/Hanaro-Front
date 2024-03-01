@@ -1,11 +1,10 @@
-import { useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "./mycontext";
 import axios from 'axios';
 
 function Logon() {
     let navigate = useNavigate();
-
     let context = useContext(AppContext);
     const [userid, setUserid] = useState<string>("");
     const [msg, setMsg] = useState<string>("");
@@ -48,13 +47,14 @@ function Logon() {
 
     }
 
-    return (<div>
-        <h1>Logon</h1>
-        <input type="text" id="userid" onChange={onChange} value={userid} placeholder="User ID" />
-        <button type="button" onClick={logon}>Sign In</button>
-        <h3 style={{ "color": "red" }}>{msg}</h3>
-    </div>);
+    return (
+        <div>
+            <h1>Logon</h1>
+            <input type="text" id="userid" onChange={onChange} value={userid} placeholder="User ID" />
+            <button type="button" onClick={logon}>Sign In</button>
+            <p className="error-msg">{msg}</p>
+        </div>
+    );
 }
 
 export default Logon;
-

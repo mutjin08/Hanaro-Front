@@ -3,12 +3,11 @@
 //복잡해진다. 
 
 import { PhotoType } from "./type/commonType";
-import '../ImageList.css';
+import './css/ImageList.css';
 function ImageList({ images }: { images: PhotoType[] }) {
 
     return (
         <div className="image-grid">
-            <h1>ImageList</h1>
             {
                 images.map((item: PhotoType) => {
                     return (

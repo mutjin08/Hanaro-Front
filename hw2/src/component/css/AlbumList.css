@@ -1,0 +1,32 @@
+/* Container styling */
+.titlecontainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Ensure a row layout */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Put items at each end of the container */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #e0e0e0;
+}
